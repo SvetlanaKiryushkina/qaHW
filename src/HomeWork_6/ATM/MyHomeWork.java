@@ -7,7 +7,8 @@ public class MyHomeWork {
         createdCreditCard();
     }
 
-    public static void createdCreditCard(){
+    public static void createdCreditCard() {
         CreditCard cardOne = new CreditCard();
         System.out.println(cardOne.gerCreditCardInformation());
+    }
 }
