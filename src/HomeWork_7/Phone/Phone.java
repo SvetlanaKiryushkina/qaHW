@@ -24,8 +24,26 @@ public class Phone {
         }
         //второй принцип инкапсуляции. Работа с полями через методы. Использование гетеров и сетеров
         //классический геттер. Возвращает номер телефона
-    public int getPhoneNumber(){
+    public int getNumber(){
             return  this.phoneNumber;
+    }
+
+    //метод receiveCall. Выводит имя звонящего
+        public void receiveCall(String name) {
+        System.out.println("Звонит " + name);
+    }
+
+    //перегруженный метод receiveCall. Принимает два параметра имя и номер
+    public String receiveCall(String name, int number){
+        return "Имя:" + name + ", Номер:" + number;
+    }
+
+    // Метод sendMessage
+    public void sendMessage(String... numbers) {
+        System.out.println("Отправка сообщения на номера:");
+        for (String num : numbers) {
+            System.out.println(num);
+        }
     }
 
       public String getPhoneInformation(){
