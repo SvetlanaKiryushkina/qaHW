@@ -2,8 +2,8 @@ package HomaWork_8.Shape.Ex1;
 
 public class Rectangle extends Figura {
     //Обьявляем переменные, длинна и ширина
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
     //конструктор
     public Rectangle(double width, double height) {

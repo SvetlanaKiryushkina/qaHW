@@ -2,7 +2,7 @@ package HomaWork_8.Shape.Ex1;
 
 public class Circle extends Figura {
     //Обьявляем переменную радиус
-    private double radius;
+    private final double radius;
 
     //Конструктор
     public Circle(double radius) {
