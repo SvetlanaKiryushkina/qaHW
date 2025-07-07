@@ -2,9 +2,9 @@ package HomaWork_8.Shape.Ex1;
 
 public class Triangle extends Figura {
     //обьявляем переменные
-    private double a;
-    private double b;
-    private double c;
+    private final double a;
+    private final double b;
+    private final double c;
 
     public Triangle(double a, double b, double c) {
         this.a = a;
