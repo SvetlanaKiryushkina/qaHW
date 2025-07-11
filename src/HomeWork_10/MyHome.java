@@ -5,31 +5,33 @@ import HomeWork_9.Invalid.Document.InvalidDocumentNumber;
 import java.util.Scanner;
 
 public class MyHome {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите номер документа: ");
-        String documentNumber = scanner.nextLine();
+    public static void main(String[] args)  {
+        String documentNumber;
+        try(Scanner scanner = new Scanner(System.in)){
+            System.out.print("Введите номер документа: ");
+            documentNumber = scanner.nextLine();
+        }
 
         try {
             validateNumber(documentNumber);
-            System.out.println("Документ прошел все проверки успешно.");
-            System.out.println("*************************************");
-            // Вызов метода для вывода двух блоков по 4 цифры
-            printTwoBlocksOfFourDigits(documentNumber);
-            System.out.println("**************************************");
-            //Вызов метода только буквы верхнего регистра
-            printLettersUpperCase(documentNumber);
-            System.out.println("**************************************");
-            //метод, только буквы в нужном формате
-            printLettersInFormat(documentNumber);
-            System.out.println("****************************************");
-            //Буквы заменить *
-            replacingLetters (documentNumber);
         } catch (NumberDocument e) {
             System.out.println("Исключение: " + e.getMessage());
-        } finally {
-            scanner.close();
         }
+
+        System.out.println("Документ прошел все проверки успешно.");
+        System.out.println("*************************************");
+        // Вызов метода для вывода двух блоков по 4 цифры
+        printTwoBlocksOfFourDigits(documentNumber);
+        System.out.println("**************************************");
+        //Вызов метода только буквы верхнего регистра
+        printLettersUpperCase(documentNumber);
+        System.out.println("**************************************");
+        //метод, только буквы в нужном формате
+        printLettersInFormat(documentNumber);
+        System.out.println("****************************************");
+        //Буквы заменить *
+        replacingLetters (documentNumber);
+
     }
 
     // Методы, который проверяют условия и выбрасывает исключение при нарушении
